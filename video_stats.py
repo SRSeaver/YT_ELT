@@ -114,7 +114,7 @@ def extract_video_data(video_ids):
 
                 extracted_data.append(video_data)
 
-            return extracted_data
+        return extracted_data
 
     except requests.exceptions.RequestException as e:
         raise e
@@ -131,4 +131,5 @@ if __name__ == "__main__":
     video_ids = get_video_ids(playlist_id)
     video_data = extract_video_data(video_ids)
     save_to_json(video_data)
-    
+
+
